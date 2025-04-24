@@ -1,0 +1,31 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ 'nil)
+(setq url-cookie-secure-storage
+ '((".twitter.com"
+  [url-cookie "guest_id_marketing" "v1%3A174111972469219729" "Thu Mar 04 20:22:04 2027 GMT" "/" ".twitter.com" t]
+  [url-cookie "guest_id_ads" "v1%3A174111972469219729" "Thu Mar 04 20:22:04 2027 GMT" "/" ".twitter.com" t]
+  [url-cookie "personalization_id" "v1_ydmIt/AhrK71/iQinEOKLw==" "Thu Mar 04 20:22:04 2027 GMT" "/" ".twitter.com" t]
+  [url-cookie "guest_id" "v1%3A174111972469219729" "Thu Mar 04 20:22:04 2027 GMT" "/" ".twitter.com" t])
+ (".x.com"
+  [url-cookie "guest_id_marketing" "v1%3A174111972518286381" "Thu Mar 04 20:22:05 2027 GMT" "/" ".x.com" t]
+  [url-cookie "guest_id_ads" "v1%3A174111972518286381" "Thu Mar 04 20:22:05 2027 GMT" "/" ".x.com" t]
+  [url-cookie "personalization_id" "v1_uTw1N3Q+04kR6Cg9sVn9GQ==" "Thu Mar 04 20:22:05 2027 GMT" "/" ".x.com" t]
+  [url-cookie "guest_id" "v1%3A174111972518286381" "Thu Mar 04 20:22:05 2027 GMT" "/" ".x.com" t]
+  [url-cookie "ct0" "8ee0358b6e171eb956fef8f82e9269b4" "Wed Mar 05 02:22:17 2025 GMT" "/" ".x.com" t])
+ (".help.x.com"
+  [url-cookie "__cf_bm" "wwhs8q6zREZbgz7Sv7ETlrTIK1SZz1mw7SH5lL4U5CE-1741119736-1.0.1.1-KZFmOIvuG_WTiNKuAFzq4jXsxHsTPORb35kYjE.NsuDmZGSarr312ptMp.FHBUlHjo7woHHpREWPB2Z36KYmjj0K6YPiqIrn5l0bxop_Xek" "Tue, 04-Mar-25 20:52:16 GMT" "/" ".help.x.com" t])
+ ("github.com"
+  [url-cookie "logged_in" "no" "Sat, 28 Feb 2026 19:20:35 GMT" "/" "github.com" t]
+  [url-cookie "_octo" "GH1.1.923771557.1740770435" "Sat, 28 Feb 2026 19:20:35 GMT" "/" "github.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; coding: utf-8-emacs-unix
+;; End:
+
+;;; cookies ends here

@@ -1,0 +1,182 @@
+*NOTE*: I am no longer actively developing this theme, though its design is now
+part of [[https://github.com/Lambda-Emacs/lambda-themes][Lambda-themes]].  
+
+Bespoke-themes is a set of custom, medium contrast, light and dark themes for Emacs
+(intended for GUI, though basic support in terminal has been added). There is also a
+related, and optional, [[https://github.com/mclear-tools/bespoke-modeline][custom modeline]]. This started as a fork of [[https://github.com/rougier][Nicolas Rougier's]]
+work on [[https://github.com/rougier/elegant-emacs][elegant-emacs]] and [[https://github.com/rougier/nano-emacs][nano-emacs]], but has evolved with some ideas and colors
+borrowed from [[https://material.io/design/color/the-color-system.html#color-theme-creation][material colors]], [[https://github.com/bbatsov/solarized-emacs][solarized]] and [[https://github.com/arcticicestudio/nord-emacs][nord]], as well as color design aided by
+[[https://coolors.co][coolers.co]] and the classic [[https://www.c82.net/werner/][Werner's Nomenclature]].
+
+The theme is notably less conservative/minimal than nano- or elegant-emacs, in
+the sense that it has a broader color palette and sets fewer configuration conditions
+on fonts and ui elements, but bespoke-themes otherwise shares many of its basic
+themeing ideas with the good work done by Rougier (see also his work on [[https://arxiv.org/abs/2008.06030][on the design
+of text editors]]).
+
+The theme sets six core colors, plus five highlight/accent colors, and colors for
+foreground, background, modeline, and highlight. The light and dark variants aim to
+be as consistent as possible in their use of colors, and to set a decent compromise
+between aesthetics and readability:
+
+#+BEGIN_HTML
+<div>
+<img src="./screenshots/display-colors.png"/>
+</div>
+#+END_HTML
+
+Faces are fairly comprehensive, including (optional) evil cursor colors. I'm trying
+to add faces on a regular basis. If there is a face you'd like to see added please
+open an issue.
+
+*NOTE*: It is still early days for this theme, so there may be significant and/or
+breaking changes made from one commit to the next. I also may continue to tweak
+colors slightly to find the best balance between aesthetics and readability.
+Suggestions and pull requests are welcome!
+
+**** Breaking Changes:
+
+I'll try and log all breaking changes, including renaming functions and variables here:
+
+- 10/19: Moved modeline to its [[https://github.com/mclear-tools/bespoke-modeline][own repo]]
+- 6/13: Normalized all modeline variable names from =bespoke...modeline= to =bespoke...mode-line= for consistency (commit: e119c0a)
+- 6/12: Renamed =bespoke-set-mode-line-height= to =bespoke-set-mode-line-size= (commit: a46b7b5)
+
+  
+*** Options
+
+- You can set italics for keywords or comments (or both).
+- You can set variable-pitch for headlines using =(bespoke-set-variable-pitch)=.
+- There is a toggle function for toggling between light and dark theme variants:
+  =(bespoke/toggle-theme)=. You can also call each theme variant directly with
+  =(bespoke/light-theme)= or =(bespoke/dark-theme)=.
+- All options are available via =customize-group=, and can also be found in the
+  =bespoke-themes.el= file.
+
+
+*** Settings
+Here's one possible way of setting up the theme. Note that since this theme is
+currently not on Melpa the [[https://github.com/jwiegley/use-package][use-package]] setup below utilizes [[https://github.com/raxod502/straight.el][straight]] to install
+packages, but you can of course install it from this repo however you wish.
+
+#+begin_src emacs-lisp
+(use-package bespoke-themes
+  :straight (:host github :repo "mclear-tools/bespoke-themes" :branch "main")
+  :config
+  ;; Set evil cursor colors
+  (setq bespoke-set-evil-cursors t)
+  ;; Set use of italics
+  (setq bespoke-set-italic-comments t
+        bespoke-set-italic-keywords t)
+  ;; Set variable pitch
+  (setq bespoke-set-variable-pitch t)
+  ;; Set initial theme variant
+  (setq bespoke-set-theme 'dark)
+  ;; Load theme
+  (load-theme 'bespoke t))
+#+end_src
+
+To get windows to divide in a more attractive manner use the following setting:
+
+#+begin_src emacs-lisp
+;; Vertical window divider
+(use-package frame
+  :straight (:type built-in)
+  :custom
+  (window-divider-default-right-width 12)
+  (window-divider-default-bottom-width 1)
+  (window-divider-default-places 'right-only)
+  (window-divider-mode t))
+;; Make sure new frames use window-divider
+(add-hook 'before-make-frame-hook 'window-divider-mode)
+
+#+end_src
+
+For the padding in frame used in the screenshots try the following settings:
+#+begin_src emacs-lisp
+;; Make a clean & minimalist frame
+(use-package frame
+  :straight (:type built-in)
+  :config
+  (setq-default default-frame-alist
+                (append (list
+                '(font . "SF Mono:style=medium:size=15") ;; NOTE: substitute whatever font you prefer here
+                '(internal-border-width . 20)
+                '(left-fringe    . 0)
+                '(right-fringe   . 0)
+                '(tool-bar-lines . 0)
+                '(menu-bar-lines . 0)
+                '(vertical-scroll-bars . nil))))
+  (setq-default window-resize-pixelwise t)
+  (setq-default frame-resize-pixelwise t)
+#+end_src
+
+To get a splash screen see Rougier's [[https://github.com/rougier/emacs-splash][splash.el]]. You can see my customization of it [[https://github.com/mclear-tools/dotemacs/blob/master/setup-config/setup-splash.el][here]].
+
+For dimming non-active windows try [[https://github.com/gonewest818/dimmer.el][dimmer.el]]
+
+#+begin_src emacs-lisp
+;; Dim inactive windows
+(use-package dimmer
+  :straight (:host github :repo "gonewest818/dimmer.el")
+  :hook (after-init . dimmer-mode)
+  :config
+  (setq dimmer-fraction 0.5)
+  (setq dimmer-adjustment-mode :foreground)
+  (setq dimmer-use-colorspace :rgb)
+  (setq dimmer-watch-frame-focus-events nil)
+  (dimmer-configure-which-key)
+  (dimmer-configure-magit)
+  (dimmer-configure-posframe))
+#+end_src
+
+*** Screenshots:
+
+Note that these all use
+[[https://github.com/mclear-tools/bespoke-modeline][bespoke-modeline]] and
+settings from my [[https://github.com/mclear-tools/dotemacs][dotemacs]].  
+
+#+BEGIN_HTML
+<div>
+<p>Splash</p>
+<img src="./screenshots/light-splash.png" width=47.5%/>
+<img src="./screenshots/dark-splash.png" width=47.5%/>
+</div>
+
+<div>
+<p>Colors</p>
+<img src="./screenshots/light-colors.png" width=47.5%/>
+<img src="./screenshots/dark-colors.png"  width=47.5%/>
+</div>
+
+<div>
+<p>Code</p>
+<img src="./screenshots/light-code.png" width=47.5%/>
+<img src="./screenshots/dark-code.png"  width=47.5%/>
+</div>
+
+<div>
+<p>Magit</p>
+<img src="./screenshots/light-magit.png" width=47.5%/>
+<img src="./screenshots/dark-magit.png"  width=47.5%/>
+</div>
+
+<div>
+<p>Agenda</p>
+<img src="./screenshots/light-agenda.png" width=47.5%/>
+<img src="./screenshots/dark-agenda.png"  width=47.5%/>
+</div>
+
+<div>
+<p>Org</p>
+<img src="./screenshots/light-org.png" width=47.5%/>
+<img src="./screenshots/dark-org.png"  width=47.5%/>
+</div>
+
+<div>
+<p>Dired</p>
+<img src="./screenshots/light-dired.png" width=47.5%/>
+<img src="./screenshots/dark-dired.png"  width=47.5%/>
+</div>
+
+#+END_HTML

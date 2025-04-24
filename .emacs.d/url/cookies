@@ -1,0 +1,28 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ 'nil)
+(setq url-cookie-secure-storage
+ '(("github.com"
+  [url-cookie "_octo" "GH1.1.923771557.1740770435" "Sat, 28 Feb 2026 19:20:35 GMT" "/" "github.com" t]
+  [url-cookie "logged_in" "no" "Sat, 28 Feb 2026 19:20:35 GMT" "/" "github.com" t])
+ (".x.com"
+  [url-cookie "guest_id" "v1%3A174111972518286381" "Thu Mar 04 20:22:05 2027 GMT" "/" ".x.com" t]
+  [url-cookie "personalization_id" "v1_uTw1N3Q+04kR6Cg9sVn9GQ==" "Thu Mar 04 20:22:05 2027 GMT" "/" ".x.com" t]
+  [url-cookie "guest_id_ads" "v1%3A174111972518286381" "Thu Mar 04 20:22:05 2027 GMT" "/" ".x.com" t]
+  [url-cookie "guest_id_marketing" "v1%3A174111972518286381" "Thu Mar 04 20:22:05 2027 GMT" "/" ".x.com" t])
+ (".twitter.com"
+  [url-cookie "guest_id" "v1%3A174111972469219729" "Thu Mar 04 20:22:04 2027 GMT" "/" ".twitter.com" t]
+  [url-cookie "personalization_id" "v1_ydmIt/AhrK71/iQinEOKLw==" "Thu Mar 04 20:22:04 2027 GMT" "/" ".twitter.com" t]
+  [url-cookie "guest_id_ads" "v1%3A174111972469219729" "Thu Mar 04 20:22:04 2027 GMT" "/" ".twitter.com" t]
+  [url-cookie "guest_id_marketing" "v1%3A174111972469219729" "Thu Mar 04 20:22:04 2027 GMT" "/" ".twitter.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; coding: utf-8-emacs-unix
+;; End:
+
+;;; cookies ends here

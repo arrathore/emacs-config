@@ -1,0 +1,1 @@
+("~/UT/3rdYear/Sem2/ECE422C/network/longhorn-network-lab-arrathore/" "~/Projects/neocities/spindrift/" "~/.emacs.d/" "~/UT/3rdYear/Sem2/ECE460J/project/compressed ece460j final project/")
