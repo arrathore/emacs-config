@@ -14,10 +14,7 @@
 
 ;; theme packages
 (use-package ef-themes
-  :ensure t
-  :config
-  (load-theme 'ef-melissa-light t)
-  (load-theme 'ef-melissa-dark t))
+  :ensure t)
 
 (use-package circadian
   :ensure t
