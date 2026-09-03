@@ -36,6 +36,11 @@
 ;; no tool bar
 (tool-bar-mode -1)
 
+;; no scroll bars, no fringe
+(scroll-bar-mode -1)
+(fringe-mode 0)
+
+
 ;; battery display
 (add-to-list 'tab-bar-format
 	     'tab-bar-format-align-right
@@ -49,8 +54,8 @@
 
 ;; clock display
 (add-to-list 'tab-bar-format
-	     'tab-bar-format-align-right
-	     'append)
+ 	     'tab-bar-format-align-right
+ 	     'append)
 
 (add-to-list 'tab-bar-format
 	     'tab-bar-format-global
@@ -61,7 +66,7 @@
 
 (display-time-mode)
 
-;; comfirm before exiting
+;; confirm before exiting
 (setq confirm-kill-emacs 'y-or-n-p)
 
 (provide 'init-ui)
