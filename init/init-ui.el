@@ -33,6 +33,9 @@
 ;; tab bar
 (tab-bar-mode 1)
 
+;; no tool bar
+(tool-bar-mode -1)
+
 ;; battery display
 (add-to-list 'tab-bar-format
 	     'tab-bar-format-align-right
