@@ -39,6 +39,10 @@
 ;; project tree integration
 (use-package treemacs-projectile)
 
+;; editor code assistant
+(use-package eca
+  :vc (:url "https://github.com/editor-code-assistant/eca-emacs" :rev :newest))
+
 ;; load language specific configs
 (require 'init-java)
 (require 'init-typescript)

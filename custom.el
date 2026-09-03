@@ -14,7 +14,7 @@
  '(lsp-enable-on-type-formatting nil)
  '(package-selected-packages
    '(circadian company consult corfu counsel-projectile csv-mode
-	       doom-themes ef-themes exec-path-from-shell flycheck
+	       doom-themes eca ef-themes exec-path-from-shell flycheck
 	       gnu-elpa-keyring-update ivy-rich lavender-theme
 	       lsp-java lsp-ui marginalia orderless org-autolist
 	       poet-theme rust-mode slime tao-theme
