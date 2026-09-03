@@ -59,7 +59,7 @@
 (setq display-time-format "%a %b %d %I:%M:%S %p")
 (setq display-time-interval 1)
 
-;; (display-time-mode)
+(display-time-mode)
 
 ;; comfirm before exiting
 (setq confirm-kill-emacs 'y-or-n-p)
