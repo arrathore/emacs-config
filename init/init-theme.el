@@ -7,17 +7,20 @@
 
 ;; additional theme directories
 (add-to-list 'custom-theme-load-path
-	     "~/.emacs.d/themes/")
+	     (expand-file-name "themes/" user-emacs-directory))
 
 (add-to-list 'custom-theme-load-path
-	     "~/.emacs.d/themes/custom")
+	     (expand-file-name "themes/custom" user-emacs-directory))
 
 ;; theme packages
 (use-package ef-themes
+  :ensure t
   :config
-  (load-theme 'ef-melissa-light t))
+  (load-theme 'ef-melissa-light t)
+  (load-theme 'ef-melissa-dark t))
 
 (use-package circadian
+  :ensure t
   :after ef-themes
   
   :config
