@@ -29,4 +29,9 @@
 
 (setq gc-cons-threshold (* 50 1000 1000))
 
+;; open a term if no file is given
+(setq inhibit-splash-screen t)
+(when (null command-line-args-left)
+  (term "/bin/bash"))
+
 ;;; init.el ends here

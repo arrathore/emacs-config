@@ -6,8 +6,8 @@
 ;;; Code:
 
 ;; start maximized
-(add-to-list 'default-frame-alist
-	     '(fullscreen . maximized))
+;;(add-to-list 'default-frame-alist
+;;	     '(fullscreen . maximized))
 
 ;; window navigation
 (windmove-default-keybindings)
