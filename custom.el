@@ -16,9 +16,9 @@
    '(circadian company consult corfu counsel-projectile csv-mode
 	       doom-themes eca ef-themes exec-path-from-shell flycheck
 	       gnu-elpa-keyring-update ivy-rich lavender-theme
-	       lsp-java lsp-ui marginalia orderless org-autolist
-	       poet-theme rust-mode slime tao-theme
-	       treemacs-projectile vertico)))
+	       lsp-java lsp-ui marginalia nix-ts-mode orderless
+	       org-autolist poet-theme rust-mode slime tao-theme
+	       treemacs-projectile treesit-auto vertico)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

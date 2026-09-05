@@ -43,9 +43,17 @@
 (use-package eca
   :vc (:url "https://github.com/editor-code-assistant/eca-emacs" :rev :newest))
 
+;; automate grammar installation
+(use-package treesit-auto
+  :ensure t
+  :config
+  (setq treesit-auto-install 'prompt)
+  (global-treesit-auto-mode))
+
 ;; load language specific configs
 (require 'init-java)
 (require 'init-typescript)
+(require 'init-nix)
 
 (provide 'init-programming)
 ;;; init-programming.el ends here
