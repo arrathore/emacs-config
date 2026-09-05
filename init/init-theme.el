@@ -28,7 +28,7 @@
   (circadian-setup))
 
 ;; custom splash screen
-(load "~/.emacs.d/custom-splash.el")
+;;(load "~/.emacs.d/custom-splash.el")
 
 (provide 'init-theme)
 ;;; init-theme.el ends here
