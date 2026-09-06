@@ -32,6 +32,6 @@
 ;; open a term if no file is given
 (setq inhibit-splash-screen t)
 (when (null command-line-args-left)
-  (term "/bin/bash"))
+  (term shell-file-name))
 
 ;;; init.el ends here
