@@ -69,5 +69,8 @@
 ;; confirm before exiting
 (setq confirm-kill-emacs 'y-or-n-p)
 
+;; use visual bell
+(setq visible-bell t)
+
 (provide 'init-ui)
 ;;; init-ui.el ends here
