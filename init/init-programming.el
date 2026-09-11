@@ -55,6 +55,9 @@
 (require 'init-typescript)
 (require 'init-nix)
 
+;; disable unneeded logging
+(setq lsp-log-io nil)
+
 (provide 'init-programming)
 ;;; init-programming.el ends here
 
