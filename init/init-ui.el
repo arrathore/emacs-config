@@ -37,8 +37,10 @@
 (tool-bar-mode -1)
 
 ;; no scroll bars, no fringe
-(scroll-bar-mode -1)
-(fringe-mode 0)
+(when (fboundp 'scroll-bar-mode)
+  (scroll-bar-mode -1))
+(when (fboundp 'fringe-mode)
+  (fringe-mode 0))
 
 
 ;; battery display

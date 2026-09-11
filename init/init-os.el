@@ -31,7 +31,7 @@
   (setq default-input-method "MacOSX")
   
   ;; default shell
-  (setq explicit-shell-file-name "/bin/bash"))
+  (setq shell-file-name "/bin/bash"))
 
 ;; linux configuration
 (when *is-a-linux*
