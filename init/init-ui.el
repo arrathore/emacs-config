@@ -9,6 +9,8 @@
 ;;(add-to-list 'default-frame-alist
 ;;	     '(fullscreen . maximized))
 
+(setq frame-resize-pixelwise t)
+
 ;; window navigation
 (windmove-default-keybindings)
 
