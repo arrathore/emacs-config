@@ -54,6 +54,7 @@
 (require 'init-java)
 (require 'init-typescript)
 (require 'init-nix)
+(require 'init-go)
 
 ;; disable unneeded logging
 (setq lsp-log-io nil)
