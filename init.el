@@ -16,6 +16,13 @@
       (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
 
+;; inherit shell variables
+(use-package exec-path-from-shell
+  :ensure t
+  :if (memq window-system '(mac ns x))
+  :config
+  (exec-path-from-shell-initialize))
+
 ;; load modules
 (require 'init-packages)
 (require 'init-os)
