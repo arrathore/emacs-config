@@ -20,6 +20,7 @@
 (load "ace-window.el")
 
 (global-set-key (kbd "M-o") #'ace-window)
+(global-set-key (kbd "C-c M-o") #'ace-window)
 
 ;; transparency
 (set-frame-parameter (selected-frame)
